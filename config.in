@@ -1,0 +1,67 @@
+#
+#
+#
+Sigma:
+epsilon
+chave
+convite
+chapeu
+colher
+espada
+coroa
+moeda
+livro_magia
+varinha
+End
+#
+#
+#
+#
+States:
+EH, S
+DR
+K
+A
+T
+L
+P
+TR
+WS
+SE, F
+End
+#
+#
+#
+#
+#
+#
+Transitions:
+EH, A, chave - A, epsilon, epsilon
+EH, DR, epsilon - DR, epsilon, epsilon
+DR, EH, convite - EH, epsilon, epsilon
+DR, K, chapeu - K, epsilon, epsilon
+DR, T, espada - T, epsilon, epsilon
+K, DR, epsilon - DR, epsilon, epsilon
+K, P, colher - P, epsilon, epsilon
+A, T, espada - T, epsilon, epsilon
+A, EH, convite - EH, epsilon, epsilon
+A, TR, coroa - TR, epsilon, epsilon
+T, A, chave - A, epsilon, epsilon
+T, DR, epsilon - DR, epsilon, epsilon
+T, L, moeda - L, epsilon, epsilon
+T, WS, livro_magia - WS, epsilon, epsilon
+L, T, espada - T, epsilon, epsilon
+L, SE, varinha - SE, epsilon, epsilon
+P, K, chapeu - K, epsilon, epsilon
+TR, A, chave - A, epsilon, epsilon
+TR, WS, livro_magia - WS, epsilon, epsilon
+WS, TR, coroa - TR, epsilon, epsilon
+WS, T, espada - T, epsilon, epsilon
+WS, SE, varinha - SE, epsilon, epsilon
+SE, SE, epsilon - SE, epsilon, epsilon
+End
+#
+#
+#
+#
+#
